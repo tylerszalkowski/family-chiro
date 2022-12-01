@@ -1,19 +1,24 @@
 {
-  "name": "express-hello-world",
+  "name": "familychiro",
   "version": "1.0.0",
-  "description": "Express Hello World on Render",
+  "description": "",
   "main": "app.js",
-  "repository": "https://github.com/render-examples/express-hello-world",
-  "author": "Render Developers",
-  "license": "MIT",
-  "private": false,
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build style.css -o css/style.css",
     "start": "node app.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  },
-  "engines": {
-    "node": ">=14"
+    "autoprefixer": "^10.4.13",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.7.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }
