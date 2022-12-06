@@ -3,16 +3,16 @@ const path = require("path");
 const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 
-mongoose.connect("mongodb://localhost:27017/yelp-camp", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect("mongodb://localhost:27017/yelp-camp", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-  console.log("Database Connected");
-});
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "connection error:"));
+// db.once("open", () => {
+//   console.log("Database Connected");
+// });
 
 const app = express();
 
@@ -47,7 +47,11 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
+app.get("/insurance", (req, res) => {
+  res.render("insurance");
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server on port ${port}`);
+  console.log(`Serving on port ${port}`);
 });
