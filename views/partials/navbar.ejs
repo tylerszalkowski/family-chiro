@@ -1,7 +1,161 @@
-<nav class="p-5 sticky border-separate border-b border-black bg-white md:space-x-3 shadow md:flex md:justify-center">
+<!-- component -->
+
+<body class="bg-white-500">
+    <nav class="relative px-4 py-4 flex justify-between items-center border-separate border-b border-black bg-zinc-50">
+        <a class="text-3xl font-bold leading-none" href="/">
+            <img class="h-20 ml-6 lg:ml-32"
+                src="https://res.cloudinary.com/tyszal/image/upload/v1671248953/logoblack_g6uvzj.png" alt="">
+        </a>
+        <div class="lg:hidden mt-auto mr-4">
+            <button class="navbar-burger flex items-center text-black-600 px-3 mr-3">
+                <svg class="block h-5 w-5 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+            <span class="font-semibold">MENU</span>
+        </div>
+        <ul
+            class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li><a class="text-xl text-zinc-800 font-bold hover:text-emerald-700 hover:underline" href="/">Home</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-xl text-zinc-800 font-bold hover:text-emerald-700 hover:underline"
+                    href="/services">Services</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-xl text-zinc-800 font-bold hover:text-emerald-700 hover:underline"
+                    href="/massage">Massage</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-xl text-zinc-800 font-bold hover:text-emerald-700 hover:underline" href="/intro">Meet the
+                    Doctors</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-xl text-zinc-800 font-bold hover:text-emerald-700 hover:underline"
+                    href="/contact">Contact Us</a></li>
+        </ul>
+        <a class="hidden lg:inline-block lg:ml-auto lg:mr-32 py-4 px-10 bg-zinc-800 text-lg text-zinc-50 font-bold rounded-xl hover:scale-110 transition duration-200"
+            href="#">Book an Appointment</a>
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-6">
+                <a class="mr-auto text-3xl font-bold leading-none" href="/">
+                    <img class="h-20"
+                        src="https://res.cloudinary.com/tyszal/image/upload/v1671248953/logoblack_g6uvzj.png"
+                        alt="Family Chiropractic Clinic Logo">
+                </a>
+                <button class="navbar-close mt-auto">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="border-separate border-t border-b border-black">
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-zinc-800 rounded" href="/">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-zinc-800 rounded" href="/services">Services</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-zinc-800 rounded" href="/massage">Massage</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-zinc-800 rounded" href="/intro">Meet the
+                            Doctors</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-zinc-800 rounded" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <div class="pt-6">
+                    <a class="block px-4 py-3 mb-3 leading-loose text-sm text-center font-semibold leading-none bg-zinc-800 text-slate-50 tracking-wide rounded-xl"
+                        href="#">Book an Appointment</a>
+
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</body>
+
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function () {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function () {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+
+<!-- <nav class="p-5 sticky border-separate border-b border-black bg-white md:space-x-3 shadow md:flex md:justify-center">
     <div class="flex justify-between md:justify-center items-center">
         <span class="text-2xl font-[inter] font-semibold cursor-pointer">
-            <a href="/"><img class="h-20 inline justify-start md:pl-10 mr-20" src="https://i.ibb.co/HtgBq6b/logo.png">
+            <a href="/"><img class="h-20 inline justify-start md:pl-10 mr-20"
+                    src="https://i.ibb.co/xDMvP66/logofull.jpg">
             </a></span>
 
         <span class="text-4xl cursor-pointer mx-2 md:hidden block">
@@ -10,7 +164,7 @@
     </div>
 
     <ul
-        class="md:flex md:items-center z-[10000] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        class="md:flex md:items-center z-[10000] font-bold tracking-tight md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
         <li class="mx-4 my-6 md:mx-6 my-2">
             <a href="/"
                 class="text-xl font-[inter] font-semibold hover:underline hover:text-emerald-600 duration-500">Home</a>
@@ -38,4 +192,4 @@
                 Us</a>
         </li>
     </ul>
-</nav>
+</nav> -->
