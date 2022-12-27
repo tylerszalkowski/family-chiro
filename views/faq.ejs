@@ -1,0 +1,165 @@
+<% layout('layouts/boilerplate') %>
+    <h1 class="text-xl md:text-4xl font-bold tracking-tight text-center my-2 md:mt-4">Frequently Asked Questions and
+        Concerns</h1>
+    <div class="md:flex md:justify-around md:items-center justify-center items-start my-2 mx-2">
+        <div><img
+                src="https://res.cloudinary.com/tyszal/image/upload/v1672111243/mathew-schwartz-8rj4sz9YLCI-unsplash_1_bqnoh7.jpg"
+                alt="a skeleton pondering their thoughts" class="p-2 inline-block md:h-[29rem]">
+        </div>
+        <div class="w-full mt-6 sm:w-10/12 md:w-1/2 my-1">
+
+            <ul class="flex flex-col">
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span>I don't want a "crack"</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            Family chiropractic specialists are all trained in alternative adjusting techniques that
+                            have no popping or cracking - the techniques are gentle and non-aggressive.
+                        </p>
+                    </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span>What makes Family<br>Chiropractic unique?</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        x-ref="tab" :style="handleToggle()">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            We have 4 doctors in the clinic who all collaborate. We offer many disciplines and
+                            techniques because we have so many providers - there are so many options for care. We
+                            also offer just a wide variety of treatment
+                            Options - we fit the treatment to you. No treatment is prefabricated.
+                        </p>
+                    </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span class="">I have had spinal surgery.<br>Can I see a chiropractor?</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        x-ref="tab" :style="handleToggle()">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            All of the chiropractors at family have had experience with treatment of patients with
+                            spinal surgeries. There are gentle treatments that offer significant pain relief
+                            including exercise instruction, acupuncture, and the doctors will focus on mobility of
+                            the spine. Motion is lotion!!
+                        </p>
+                    </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span>I have osteoporosis.<br>Can I still be treated?</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        x-ref="tab" :style="handleToggle()">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            Yes! We are very comfortable treating patients will osteoporosis. We perform a thorough
+                            exam and history so that your treatment is tailored to your specific condition and
+                            needs. We have gentle techniques to use that do not push or stress the bones and joints.
+                        </p>
+                    </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span>Are adjustments expensive if I<br>don't have insurance?</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        x-ref="tab" :style="handleToggle()">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            No! We have a same day for treatment payment that is under 50$. It includes adjustment
+                            heat and any therapies you may need. We also have massage plans to help patients with
+                            chronic conditions to stay ahead of their pain.
+                        </p>
+                    </div>
+                </li>
+                <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
+                    <h2 @click="handleClick()"
+                        class="flex flex-row md:text-2xl justify-between items-center font-semibold p-3 cursor-pointer">
+                        <span>What is the difference between<br>dry needling and acupuncture?</span>
+                        <svg :class="handleRotate()"
+                            class="fill-current text-zinc-700 h-6 w-6 transform transition-transform duration-500"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                            </path>
+                        </svg>
+                    </h2>
+                    <div class="border-l-2 border-emerald-600 overflow-hidden max-h-0 duration-500 transition-all"
+                        x-ref="tab" :style="handleToggle()">
+                        <p class="p-3 text-gray-900 md:text-xl">
+                            Acupuncture is meridian therapy and is used to treat chronic pain. Dry needling is used
+                            for acute care - and painful muscles and tendons. Both are offered at Family
+                            Chiropractic.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('accordion', {
+                tab: 0
+            });
+
+            Alpine.data('accordion', (idx) => ({
+                init() {
+                    this.idx = idx;
+                },
+                idx: -1,
+                handleClick() {
+                    this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+                },
+                handleRotate() {
+                    return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+                },
+                handleToggle() {
+                    return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+                }
+            }));
+        })
+    </script>
