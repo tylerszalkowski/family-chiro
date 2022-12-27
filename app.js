@@ -39,16 +39,16 @@ app.get("/intro", (req, res) => {
   res.render("intro");
 });
 
-app.get("/paperwork", (req, res) => {
-  res.render("paperwork");
-});
-
 app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
 app.get("/insurance", (req, res) => {
   res.render("insurance");
+});
+
+app.get("/faq", (req, res) => {
+  res.render("faq");
 });
 
 const port = process.env.PORT || 3000;
